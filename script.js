@@ -5,7 +5,6 @@ function clock() {
   const targetDate = new Date('June 19, 2016 00:00:00 GMT'); 
   const timeDifference = currentDate - targetDate;
 
-  const milliseconds = Math.floor(timeDifference % 1000);
   const seconds = Math.floor((timeDifference / 1000) % 60);
   const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
   const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
@@ -15,12 +14,11 @@ function clock() {
     Días: days,
     Horas: hours,
     Minutos: minutes,
-    Segundos: seconds,
-    Milisegundos: milliseconds
-  };const valFormat = (val) => {
-    if
+    Segundos: seconds
+  };
 
-   (typeof val === 'number') return `<span class="value number">${val}</span>`;
+  const valFormat = (val) => {
+    if (typeof val === 'number') return `<span class="value number">${val}</span>`;
     else if (typeof val === 'string') return `<span class="value string">"${val}"</span>`;
   };
 

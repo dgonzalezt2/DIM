@@ -1,19 +1,21 @@
-.watch{
+.watch {
   --watch-color: rgb(255, 255, 255);
-  --screen-color: rgb(82, 10, 10);  
-  font-size: 4.5vmin;
+  --screen-color-left: rgb(29, 29, 195); /* Color azul */
+  --screen-color-right: rgb(180, 36, 36); /* Color rojo */
+  font-size: 4vmin;
   font-family: monospace;
+  font-weight: bold;
   color: #fff;
   padding: 2em 1.5em;
   border: 2px solid var(--watch-color);
   border-radius: 2em;
-  box-shadow:
-    inset 0 0 0 .5em black,
-    inset 0 0 1rem 1em hsl(0 0% 100% / .25);
-  background-color: var(--screen-color);
-  background-image: linear-gradient(to bottom right, #fff0 50%, hsl(0 0% 100% / .25));
+  box-shadow: inset 0 0 0 .5em black, inset 0 0 1rem 1em hsl(0 0% 100% / .25);
+  background: linear-gradient(to right, var(--screen-color-left) 0%, var(--screen-color-left) 50%, var(--screen-color-right) 50%, var(--screen-color-right) 100%);
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
+
 .watch::before, .watch::after{
   content: "";
   position: absolute;
@@ -32,18 +34,18 @@
     repeating-linear-gradient(#fff0 0 .3em, hsl(0 0% 0% / .125) .3em .5em, #fff0 .5em .8em),
     radial-gradient(circle, #fff0, hsl(0 0% 0% / .25) 50%);
 }
-.keyword  { color: #ddca7e; }
-.def      { color: #809bbd; }
-.operator { color: #cccccc; }
-.property { color: #9a8297; }
-.string   { color: #96b38a; }
-.number   { color: #d0782a; }
+.keyword  { color: #000000; }
+.def      { color: #000000; }
+.operator { color: #000000; }
+.property { color: #000000; }
+.string   { color: #000000; }
+.number   { color: #000000; }
 * { box-sizing: border-box; }
 body { 
   margin: 0;
   padding: 1em;
   min-height: 100vh;
-  background-color: #98a3ce;
+  background-color: #952c2c;
   display: grid;
   place-items: center;
   overflow: hidden;
