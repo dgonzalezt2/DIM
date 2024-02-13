@@ -5,7 +5,9 @@
   font-size: 4vmin;
   font-family: monospace;
   font-weight: bold;
-  color: #fff;
+  color: #000000;
+  left: 25%;
+  transform: translaeX(50%); /* Ajusta este valor para centrar el reloj en la posición deseada */
   padding: 2em 1.5em;
   border: 2px solid var(--watch-color);
   border-radius: 2em;
@@ -14,6 +16,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+
 }
 
 .watch::before, .watch::after{

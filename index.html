@@ -1,16 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Reloj 2016</title>
-  <link rel="stylesheet" href="./style.css">
-
+    <meta charset="UTF-8">
+    <title>Reloj DIM</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        h1#diasPasados {
+            position: absolute;
+            left: 33%;
+            transform: translateX(-50%);
+            color: rgb(237, 235, 235);
+            white-space: pre-line;
+            font-size: 1.9em;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+  </div>
 
 <div class="watch"></div>
 
-  <script  src="./script.js"></script>
+<h1 id="diasPasados"></h1>
+
+<script src="./script.js"></script>
+<script>
+  // Fecha de referencia: 19 de junio de 2016
+  var fechaReferencia = new Date('2016-06-19');
+
+  // Fecha actual
+  var fechaActual = new Date();
+
+  // Calcula la diferencia en milisegundos
+  var diferenciaEnMilisegundos = fechaActual - fechaReferencia;
+
+  // Convierte la diferencia a días
+  var diasPasados = Math.floor(diferenciaEnMilisegundos / (1000 * 60 * 60 * 24));
+
+  // Obtiene la fecha actual
+  var diaActual = fechaActual.getDate();
+  var mesActual = fechaActual.getMonth() + 1; // Nota: Los meses empiezan desde 0
+  var anioActual = fechaActual.getFullYear();
+
+  // Muestra el resultado en el elemento con el ID "diasPasados"
+  document.getElementById('diasPasados').innerText = 'Han pasado ' + diasPasados + ' días desde el 19 de junio de 2016 hasta el día de hoy\n 📅Hoy es ' + diaActual + '/' + mesActual + '/' + anioActual + '';
+</script>
+<div id="DIM-container">
+  <div id="DIM">
+      <img src="dimcry.jpg" alt="Triston">
+      <style>
+                #DIM-container {
+          position: absolute;
+          left: 25%; /* Ajusta la posición izquierda según sea necesario */
+          top: 57%; /* Ajusta la posición superior según sea necesario */
+      }
+
+      #DIM {
+          text-align: center; /* Centra la imagen horizontalmente */
+      }
+
+      #DIM img {
+          width: 270px; /* Ajusta el ancho de la imagen según sea necesario */
+          height: auto; /* Permite mantener la proporción de aspecto original */
+      }
+      </style>
+  </div>
+</div>
 
 </body>
 </html>
