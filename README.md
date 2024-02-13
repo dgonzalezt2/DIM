@@ -29,4 +29,5 @@ Open the ```index.html``` file in your preferred browser.
 
 ![image](https://github.com/dgonzalezt2/DIM/assets/81880494/659605c7-6bf9-4ae0-930e-212d1a110179)
 
-![image](https://github.com/dgonzalezt2/DIM/assets/81880494/d722c3b8-baef-4b58-8efc-a012df348922)
+![image](https://github.com/dgonzalezt2/DIM/assets/81880494/5c89de1b-2240-40e2-9ea1-004f994df3e9)
+
